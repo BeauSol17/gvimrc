@@ -1,0 +1,56 @@
+" Set to no vi compatibility mode
+set nocompatible
+
+" syntax highlighting
+syntax on
+
+" solarized colorscheme Dark background and set
+" set background=dark
+" colorscheme solarized
+"
+" set colorscheme to moria and dark
+colorscheme moria
+set background=dark
+
+" set the font
+set guifont=Lucida_Console:h10:cANSI
+
+" turn on the ruler
+set ruler
+
+" turn on the line numbers
+set number
+
+" allow backspace to delete newlines and beyond the start of the insertion point
+set backspace=2
+
+" remove annoying errorbells
+set vb t_vb=
+
+
+" Set options for using spaces for indents.
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+" set the autoindent function
+set autoindent
+
+" WINDOWS friendly mappings
+" CTRL-T opens a new tab, CTRL-W closes tab, CTRL-Left/Right switches tabs
+noremap   <C-T> :tabnew<return>
+noremap   <C-W> :tabclose<return>
+noremap   <C-Left> :tabprevious<return>
+noremap   <C-Right> :tabNext<return>
+" CTRL-A is Select all
+noremap   <C-A> gggH<C-O>G
+inoremap  <C-A> <C-O>gg<C-O>gH<C-O>G
+cnoremap  <C-A> <C-C>gggH<C-O>G
+" CTRL-v is Paste in insert mode, otherwise it is Visual-Block mode by default
+inoremap  <C-v> <esc>"*pa
+"noremap   <C-v> "*p<return>
+" CTRL-x is cut (in visual mode only)
+vnoremap <C-x> "*d
+" CTRL-c is copy (in visual mode only)
+vnoremap <C-c> "*y
